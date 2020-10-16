@@ -8,4 +8,4 @@ Steps to make it work.
 4. Press Alt+d.
 5. Search for startup here.
 6. Paste the shortcut of to this entire folder containing all three files here.
-7. You are done, Enjoy your ironman walcome screen. :)
+7. You are done, Enjoy your ironman welcome screen. :)

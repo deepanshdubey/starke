@@ -1,16 +1,17 @@
 // Author   : Aqdas Ahmad Khan & Deepansh Dubey.
 // Date     : 26/03/2020
 // Purpose  : Greet at startup
+
 import java.io.*;
 import java.util.*;
 class starkup
 {
 	void render(String str,char cc)
 	{
-		str=str.toUpperCase();
-		int I,i,j=0,l,k,ii,a,t=0;
+		str = str.toUpperCase();
+		int I, i, j = 0, l, k, ii, a, t = 0;
 		//Even indices have '*' and odd indices have ' ' (space)
-		int A[][]={
+		int A[][] = {
 		{							//space
 		0,2,-1,
 		0,2,-1,
@@ -542,7 +543,7 @@ class starkup
 		0,1,1,5,-1,
 		7,-1,-2
 		},
-		{								//[
+		{							//[
 		3,-1,
 		1,2,-1,
 		1,2,-1,
@@ -551,7 +552,7 @@ class starkup
 		1,2,-1,
 		3,-1,-2
 		},
-		{								// \
+		{							// \
 		1,6,-1,
 		0,1,1,5,-1,
 		0,2,1,4,-1,
@@ -560,7 +561,7 @@ class starkup
 		0,5,1,1,-1,
 		0,6,1,-1,-2
 		},
-		{								//]
+		{							//]
 		3,-1,
 		0,2,1,-1,
 		0,2,1,-1,
@@ -569,7 +570,7 @@ class starkup
 		0,2,1,-1,
 		3,-1,-2
 		},
-		{								//^
+		{							//^
 		0,4,2,4,-1,
 		0,2,2,2,2,2,-1,
 		2,6,2,-1,
@@ -578,7 +579,7 @@ class starkup
 		0,10,-1,
 		0,10,-1,-2
 		},
-		{								//_
+		{							//_
 		0,7,-1,
 		0,7,-1,
 		0,7,-1,
@@ -587,7 +588,7 @@ class starkup
 		0,7,-1,
 		7,-1,-2
 		},
-		{								//`
+		{							//`
 		0,1,2,4,-1,
 		0,3,2,2,-1,
 		0,5,2,-1,
@@ -596,7 +597,7 @@ class starkup
 		0,7,-1,
 		0,7,-1,-2
 		},
-		{								//{
+		{							//{
 		0,3,3,-1,
 		0,2,1,3,-1,
 		0,2,1,3,-1,
@@ -605,7 +606,7 @@ class starkup
 		0,2,1,3,-1,
 		0,3,3,-1,-2
 		},
-		{								// |
+		{							// |
 		0,1,1,1,-1,
 		0,1,1,1,-1,
 		0,1,1,1,-1,
@@ -614,7 +615,7 @@ class starkup
 		0,1,1,1,-1,
 		0,1,1,1,-1,-2
 		},
-		{								//}
+		{							//}
 		3,3,-1,
 		0,3,1,2,-1,
 		0,3,1,2,-1,
@@ -623,7 +624,7 @@ class starkup
 		0,3,1,2,-1,
 		3,3,-1,-2
 		},
-		{								//~
+		{							//~
 		0,13,-1,
 		0,13,-1,
 		0,2,3,8,-1,
@@ -639,35 +640,30 @@ class starkup
 			
 			
 			
-			
-			
-			
-			
-			
-		for(I=0;I<7;I++)									//1 line print kr ra hai.
+		for(I = 0; I < 7; I++)									//1 line print kr ra hai.
 		{
 			System.out.print("  ");								//meri wajah se.
-			for(i=0;i<str.length();i++)							//character utha ra hai, single complete line print kr ra hai.
+			for(i = 0; i < str.length(); i++)							//character utha ra hai, single complete line print kr ra hai.
 			{
-				a=(int)str.charAt(i);
-				a=a-32;									//To bring ascii value b/w 0 to 94.
-				if(a>=91&&a<=94)
-					a=a-26;								//To bring ascii value of these char from 65 to 68.
-				l=0;									//Konsa -1 chal ra hai.
-				k=0;
-				if(a>=0&&a<=68)
+				a = (int)str.charAt(i);
+				a = a - 32;									//To bring ascii value b/w 0 to 94.
+				if(a >= 91 && a <= 94)
+					a = a - 26;								//To bring ascii value of these char from 65 to 68.
+				l = 0;									//Konsa -1 chal ra hai.
+				k = 0;
+				if(a >= 0 && a <= 68)
 				{
 					t++;
-					for(j=0;A[a][j]!=-2;j++)
+					for(j = 0; A[a][j] !=- 2; j++)
 					{
-						if (A[a][j]==-1)
+						if (A[a][j] == -1)
 						{
 							l++;
-							k=0;
+							k = 0;
 						}
-						else if(l==I)						//print yaha se start ho ra hai.
+						else if(l == I)						//print yaha se start ho ra hai.
 						{
-							for(ii=0;ii<A[a][j];ii++)			//space ya character kitni baar print hona hai.
+							for(ii = 0; ii<A[a][j]; ii++)			//space ya character kitni baar print hona hai.
 							{
 								//for delay in printing
 								try
@@ -676,13 +672,13 @@ class starkup
 								}
 								catch(Exception e)
 								{
-									for(int m=1;m<=1000000;m++);
+									for(int m = 1; m <= 1000000; m++);
 								}
-								if(k%2==0)
+								if(k % 2 == 0)
 								{
 									System.out.print(cc);
 								}
-								if(k%2!=0)
+								if(k % 2 != 0)
 								{
 									System.out.print(" ");
 								}
@@ -695,7 +691,7 @@ class starkup
 			}
 			System.out.println();
 		}
-		if(t==0)
+		if(t == 0)
 			render("invalid",cc);
 	}
 	void credit()
@@ -710,7 +706,7 @@ class starkup
 	}
 	public static void main(String args[])throws IOException
 	{
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		starkup ob = new starkup();
 		System.out.println("\n\n\n\n\n\n\n\n\n");
 		ob.render("           Welcome :)",'#');
@@ -724,7 +720,7 @@ class starkup
 		}
 		catch(Exception e)
 		{
-			for(long m=1;m<=1000000000;m++);
+			for(long m = 1; m <= 1000000000; m++);
 		}
 	}
 }
